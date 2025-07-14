@@ -29,7 +29,7 @@ const LanguageSelector = () => {
                 onClick={() => setIsOpen((prev) => !prev)}
             >
                 <img
-                    src={`./images/language-icons/${currentLangObj.code}.png`}
+                    src={`images/language-icons/${currentLangObj.code}.png`}
                     alt={currentLangObj.lang}
                     className="w-full h-full object-cover"
                 />

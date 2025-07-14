@@ -100,7 +100,7 @@ const WeatherBg = ({ data, className = "" }: WeatherBgProps) => {
                 id: `cloud-${crypto.randomUUID()}`,
                 top: `${Math.random() * 50 + 10}%`,
                 delay: `${i * 0.5}s`,
-                src: `./images/bg-assets/cloud-${Math.floor(Math.random() * 3) + 1}.png`,
+                src: `images/bg-assets/cloud-${Math.floor(Math.random() * 3) + 1}.png`,
                 left: `${Math.random() * 100}%`
         }))
 
@@ -111,7 +111,7 @@ const WeatherBg = ({ data, className = "" }: WeatherBgProps) => {
                 id: `cloud-${crypto.randomUUID()}`,
                 top: `${Math.random() * 50 + 10}%`,
                 delay: "0s",
-                src: `./images/bg-assets/cloud-${Math.floor(Math.random() * 3) + 1}.png`,
+                src: `images/bg-assets/cloud-${Math.floor(Math.random() * 3) + 1}.png`,
                 left: "-200px"
             };
 
@@ -253,7 +253,7 @@ const WeatherBg = ({ data, className = "" }: WeatherBgProps) => {
                     {morningBirds.map((bird) => (
                         <img 
                             key={bird.id}
-                            src={`./images/bg-assets/bird-${bird.direction}.png`}
+                            src={`images/bg-assets/bird-${bird.direction}.png`}
                             className={`absolute pointer-events-none`}
                             style={{
                                 top: bird.top,

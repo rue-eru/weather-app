@@ -36,7 +36,7 @@ const HumidityDisplay = ({data}: HumidityDisplayProps) => {
             >
                 
                 <img
-                    src={`./images/component window icons/humidity.png`}
+                    src={`images/component window icons/humidity.png`}
                     alt='humidity'
                     className='window-icon'
                     draggable="false"
