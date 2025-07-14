@@ -29,7 +29,7 @@ const LanguageSelector = () => {
                 onClick={() => setIsOpen((prev) => !prev)}
             >
                 <img
-                    src={`/images/language-icons/${currentLangObj.code}.png`}
+                    src={`./images/language-icons/${currentLangObj.code}.png`}
                     alt={currentLangObj.lang}
                     className="w-full h-full object-cover"
                 />
@@ -47,7 +47,7 @@ const LanguageSelector = () => {
                                 className="w-8 h-8 rounded-full overflow-hidden hover:scale-105 transition"
                             >
                                 <img 
-                                    src={`/images/language-icons/${lng.code}.png`}
+                                    src={`./language-icons/${lng.code}.png`}
                                     alt={lng.lang}
                                     className="w-full h-full object-cover"
                                 />

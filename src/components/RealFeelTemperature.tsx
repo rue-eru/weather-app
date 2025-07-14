@@ -42,7 +42,7 @@ const RealFeelTemperature = ({ data, unit = 'celsius', rounded = true }: RealFee
                     className={`${windowClass}`}
                 >
                         <img
-                                src={`/images/component window icons/temperature.png`}
+                                src={`./images/component window icons/temperature.png`}
                                 alt='feels like temperature'
                                 className='window-icon'
                                 draggable="false"

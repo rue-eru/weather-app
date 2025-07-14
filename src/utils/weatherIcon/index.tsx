@@ -29,7 +29,7 @@ export const WeatherIcon = ({code, size = 'md', className = '', data, timezone, 
     ].includes(iconType);
 
     const getIconPath = () => {
-        const basePath = `/images/weather_variable/`;
+        const basePath = `./images/weather_variable/`;
 
         if (hasNightVar && isNight) {
             return `${basePath}${iconType}-night.png`
@@ -46,7 +46,7 @@ export const WeatherIcon = ({code, size = 'md', className = '', data, timezone, 
             className={`${styles.WeatherIcon} ${styles[size]} ${className}}`}
             draggable="false"
             onError={(e) => {
-                (e.target as HTMLImageElement).src = `/images/weather_variable/unknown.png`
+                (e.target as HTMLImageElement).src = `./images/weather-variable/unknown.png`
             }}
         />
     )
