@@ -1,0 +1,30 @@
+/* WeatherIcon.module.css */
+.weatherIcon {
+    object-fit: contain;
+    pointer-events: none;
+  }
+  
+  /* Size variants */
+  .sm {
+    width: 2rem;
+    height: 2rem;
+  }
+  
+  .md {
+    width: 2rem;
+    height: 2rem;
+  }
+  
+  .lg {
+    width: 5rem;
+    height: 5rem;
+  }
+  
+  /* Color adjustments based on weather type */
+  .drizzle {
+    filter: brightness(0.8);
+  }
+  
+  .thunderstorm {
+    filter: drop-shadow(0 0 2px rgba(255, 255, 255, 0.7));
+  }

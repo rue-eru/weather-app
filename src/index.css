@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&family=Noto+Sans+JP:wght@400;700&family=Rubik:wght@400;600&display=swap');
+@import "tailwindcss";
+
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+body {
+  width: 60%;
+  margin: 0 auto;
+  margin-top: 2rem;
+  overflow-x: hidden;
+  min-width: 500px;
+
+}
+
+.font-english {
+  font-family: 'Quicksand', sans-serif;
+}
+
+.font-japanese {
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+.font-russian {
+  font-family: 'Rubik', sans-serif;
+}
+
+.scrollbar-style::-webkit-scrollbar {
+  height: 5px;
+  background: transparent;
+}
+
+.scrollbar-style::-webkit-scrollbar-thumb {
+  background-color: rgba(100, 100, 100, 0.4);
+  border-radius: 10px;
+}
+
+
+.humidity-display .text-muted {
+  color: #999;
+  font-style: italic;
+}
+
+.window-icon {
+  height: 40px;
+  object-fit: contain;
+  pointer-events: none;
+  position: absolute;
+  top: 6px;
+  left: 6px;
+}
+
+.window-style {
+  border-radius: 15px;
+}
+
+.transition-bg {
+  position: fixed;
+  inset: 0;
+  z-index: -10;
+  transition: background 1s ease-in-out;
+}
+
+/*
+NIGHT 9PM - 5AM
+dark blue bg with twinkling and shooting star animations
+*/
+
+.bg-night {
+  background: linear-gradient(to bottom, #0f0f27, #202443, #2c5364);
+}
+
+.window-night {
+  background-color: rgba(30, 30, 60, 0.199);
+  color: aliceblue;
+}
+
+.star {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: white;
+  border-radius: 50%;
+  opacity: 0.8;
+  animation: twinkle 2s infinite ease-in-out;
+}
+
+@keyframes twinkle {
+  0%, 100% { opacity: 0.2;}
+  50% { opacity: 1;}
+}
+
+.shooting-star {
+  position: absolute;
+  width: 100px;
+  height: 2px;
+  background: linear-gradient(90deg, white, transparent);
+  animation: shoot 10s ease-out infinite;
+  opacity: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+@keyframes shoot {
+  0% {
+    transform: translate(0, 0) rotate(45deg);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translate(100vh, 100vh) rotate(45deg);
+    opacity: 0.5;
+  }
+}
+
+/*
+MORNING 5AM - 11AM
+*/
+
+.bg-morning {
+  background: linear-gradient(to bottom, #FFDEE9, #b5fffc);
+}
+
+.window-morning {
+  background-color: rgba(255, 250, 230, 0.8);
+  color: black;
+}
+
+@keyframes  bird-right {
+  0% { left: -10%; opacity: 1; }
+  100% { left: 110%; opacity: 0;}
+}
+
+@keyframes bird-left {
+  0% { right: -60%; opacity: 1;}
+  100% { right: 110%; opacity: 0;}
+}
+
+/*
+DAY 11AM - 5PM
+*/
+
+.bg-day {
+  background: linear-gradient(to bottom, #87cefa, #ffffff);
+}
+
+.window-day {
+  background-color: rgba(255, 255, 255, 0.695);
+  color: black;
+}
+
+.cloud {
+  position: absolute;
+  width: 200px;
+  animation: floatCloud 60s linear infinite;
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+@keyframes floatCloud {
+  0% {
+    transform: translateX(-150px);
+    opacity: 0.6;
+  }
+  20% {
+    opacity: 0.7;
+  }
+  100% {
+    transform: translateX(100vw);
+    opacity: 0.2;
+  }
+}
+
+/*
+EVENING 5PM - 9PM
+*/
+
+.bg-evening {
+  background: linear-gradient(to bottom, #f3904f, #3b4371);
+}
+
+.window-evening {
+  background-color: rgba(255, 220, 200, 0.604);
+  color: whitesmoke;
+}
+
+@keyframes float-flicker {
+  0%, 100% { 
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-3px);
+  }
+}
+
+.flicker-dot {
+  position: absolute;
+  background: #ffd700;
+  border-radius: 50%;
+  animation: float-flicker 3s ease-in-out infinite;
+}
+
+/*
+STARTING SCREEN BG
+*/
+
+.starting-screen {
+  background: linear-gradient(
+    135deg,
+    #ff01bb 0%,
+    #1a5ee4 50%,
+    #06ff44 100% 
+  );
+  background-size: 400%, 400%;
+  animation: gradientPulse 12s ease-in-out infinite;
+}
+
+@keyframes gradientPulse {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%;}
+  100% { background-position: 0% 50%;}
+}
+
+@keyframes float {
+  0%, 100% {transform: translateY(-0) rotate(0deg);}
+  50% { transform: translateY(-30px) rotate(5deg);}
+}
+
+
