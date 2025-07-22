@@ -50,11 +50,13 @@ Aside from the "API wars" (which I spent countless hours debugging and cross-che
 - Creating birds, clouds, shooting stars, and flickering lights was fun, but also frustrating at times
 - Timing elements (e.g., birds disappearing too soon or stars spawning mid-screen) took debugging
 - I used `map()` to generate animation elements, and only during deployment noticed duplicated `key` warnings — fixed with `crypto.randomUUID()`
+- Had an idea for smooth "@"'s animation while hidden text had to push it over, but settled for the clean working solution instead. 
 
 ### 📱 Responsiveness
 - Though I’ve made responsive designs before, this was my first time using **only Tailwind CSS**
 - I mistakenly started with desktop-first layouts, then realized Tailwind is **mobile-first**  
   → Spent several evenings refactoring
+- I spend a lot of time trying to deal with a conflict of two containers. One wouldn't allow another one to be shown on hover due to `overflow-hidden` property, but I couln't remove it since without it the text glitched before dissapearing. That also led to problems with that same component overflowing on `sm` screen layouts due to different languages had to use different word placing on the screen.
 
 ### 🕒 Timezone Bugs
 - Some buttons and animations wouldn't render properly due to time zone mismatch
@@ -64,11 +66,17 @@ Aside from the "API wars" (which I spent countless hours debugging and cross-che
 - Weather icon logic had to be rewritten multiple times to correctly reflect conditions at **night vs. day**
 - Switched from several small, repeated functions to a more flexible main handler
 
-### 🧩 Frontend Libraries
+### 🎨 Frontend Libraries
 - Tried to use **Shadcn/UI**, but introduced it late in development
 - One component (tooltip-style description window) lacked proper styling and broke layout
 - Shadcn also had compatibility issues with React 19  
   → Rather than refactor everything, I built a custom component instead
+
+### 🧩 Git
+Who doesn't make mistakes when starting working with Git?
+- At first i accidentally merged my working first version with empty repo so ended up spending hours of gooogling how to return it and [thank you bro for saving me](https://dev.to/towernter/how-to-recover-a-project-or-files-deleted-when-running-git-commands-40je)
+- Then I uploaded a final working version and my images refused to render also I spend some time trying to fix it with main problem being github pages being too sensetive to path declarations
+- I didn't fix it at first since nothing worked and after adding one more component with credits faced the problem with it also not rendering. Occasionally I just pushed all changes to master branch and didn't deploy the project for github pages to pick those changes.
 
 ---
 
