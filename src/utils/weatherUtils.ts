@@ -115,7 +115,7 @@ export const getWindowStyles = (date: Date| null, data: WeatherResponse | null) 
         case "bg-night":
             return "window-night";
         case 'starting-screen':
-        default: return ""
+        default: return "window-start"
     }
 }
 
@@ -154,6 +154,23 @@ export const getInputStyle = (date: Date | null, data: WeatherResponse | null) =
     }
 }  
 
+export const getTextStyles = (date: Date| null, data: WeatherResponse | null) => {
+    const timeClass = getTimeOfDayClass(date, data);
+
+    switch (timeClass ) {
+        case "bg-day":
+            return "text-black";
+        case "bg-evening":
+            return "text-[whitesmoke]";
+        case "bg-morning":
+            return "text-black";
+        case "bg-night":
+            return "text-[aliceblue]";
+        case 'starting-screen':
+        default: return "text-white"
+    }
+}
+
 
 interface NamedDetails {
     name: string;
@@ -183,3 +200,9 @@ export const getFontClass = (lang: string) => {
     if (lang.startsWith("ru")) return "font-russian";
     return "font-english";
   };
+
+  export const languages = [
+    {code: 'en', lang: "English"},
+    {code: 'ru', lang: "Русский"},
+    {code: 'ja', lang: "日本語"},
+];

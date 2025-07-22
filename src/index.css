@@ -193,7 +193,7 @@ EVENING 5PM - 9PM
 }
 
 .window-evening {
-  background-color: rgba(255, 220, 200, 0.604);
+  background-color: #3b437156;
   color: whitesmoke;
 }
 
@@ -239,4 +239,51 @@ STARTING SCREEN BG
   50% { transform: translateY(-30px) rotate(5deg);}
 }
 
+.window-start {
+  background-color: #fff;
+}
+
+/*@ rotation animation*/
+
+@theme {
+  --animate-roll: roll 0.8s ease-out forwards;
+  @keyframes roll{
+    0% {
+      transform: translateX(0) rotate(0deg);
+    }
+    50% {
+      transform: translateX(-100px) rotate(180deg);
+    }
+    100% {
+      transform: translateX(0px) rotate(360deg);
+
+    }
+  }
+}
+
+/* color change for text animation */
+a {
+    background: linear-gradient(
+        to right,
+        #7953cd 20%,
+        #00affa 30%,
+        #0190cd 70%,
+        #764ada 80%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-fill-color: transparent;
+    background-size: 500% auto;
+    animation: textShine 2.5s ease-in-out infinite alternate;
+}
+
+@keyframes textShine {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 0%;
+    }
+}
 

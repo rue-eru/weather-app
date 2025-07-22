@@ -62,5 +62,8 @@
     "99": "雷とあられ",
     "unknown": "不明な天気"
   },
-  "unknown": "不明"
+  "unknown": "不明",
+  "Project by": "によるプロジェクト",
+  "profile":"GitHubの\nプロフィールを\nご覧ください"
+
 }

@@ -14,6 +14,7 @@ import { useTranslation } from 'react-i18next';
 import i18next from 'i18next';
 import { UVData } from './types/openUV';
 import { getFontClass } from './utils/weatherUtils';
+import CreditToggle from './components/CreditToggle';
 
 function App() {
   const [weather, setWeather] = useState<WeatherResponse | null>(null);
@@ -76,7 +77,10 @@ function App() {
         />
       )}
 
-      <div className='fixed sm:absolute top-2 right-4 z-50'>
+      <div className='fixed sm:absolute top-2 right-4 z-50 flex flex-row gap-5'>
+        <CreditToggle 
+          data={weather || null}
+        />
         <LanguageSelector/>
       </div>
 

@@ -9,7 +9,7 @@ const StartingBg = ({ children }: StartingBgProps) => {
     const [icons, setIcons] = useState<{ src: string; id: string}[]>([]);
 
     useEffect(() => {
-        const folder = 'images/weather-variable/';
+        const folder = './images/weather-variable/';
         const icon_names = ['clear', 'clear-night', 'clouds', 'drizzle', 'fog', 'freezing rain', 'overcast', 'partly-clear', 'partly-clear-night' , 'partly-cloudy', 'partly-cloudy-night' , 'rain', 'snow', 'thunderstorm']
 
         const indices = Array.from({ length: icon_names.length }, (_, i) => i );

@@ -69,7 +69,7 @@ const UVIndicator = ({ uvData, data, latitude, longitude }: UVIndicatorProps) =>
             >
                 <div>
                     <img
-                        src={`images/component window icons/ultraviolet.png`}
+                        src={`./images/component window icons/ultraviolet.png`}
                         alt='ultraviolet'
                         className='window-icon'
                         draggable="false"

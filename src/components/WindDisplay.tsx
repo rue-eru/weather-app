@@ -50,7 +50,7 @@ const WindDisplay = ({ data, unit = 'km/h' }: WindDisplayProps) => {
                 >
       
                     <img
-                        src={`images/component window icons/wind-rose.png`}
+                        src={`./images/component window icons/wind-rose.png`}
                         alt='wind-rose'
                         className='window-icon'
                         draggable="false"

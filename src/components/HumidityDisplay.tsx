@@ -32,11 +32,10 @@ const HumidityDisplay = ({data}: HumidityDisplayProps) => {
             <HoverCloud 
                 text={t("Humidity")}
                 className={`${windowClass}`}
-
             >
                 
                 <img
-                    src={`images/component window icons/humidity.png`}
+                    src={`./images/component window icons/humidity.png`}
                     alt='humidity'
                     className='window-icon'
                     draggable="false"
