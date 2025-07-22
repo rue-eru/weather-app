@@ -2,7 +2,12 @@
 
 A fully responsive weather application that visualizes real-time weather through dynamic, animated scenes and supports several languages. Build with React 19 + TypeScript and styled via Tailwind CSS, the app adjusts visuals by location, and time of day.
 
+> **Note for Japanese Recruiters**:  
+> 日本語の説明が必要な場合は、[日本語版README](README.ja.md)をご覧ください。  
+> 翻訳の経験を活かした国際化対応が得意です。
+
 [Live Demo](https://rue-eru.github.io/weather-app)
+
 ![Starting Screen](./public/images/demo-showcase/starting-screen-en.png)
 ![Loading Screem](./public/images/demo-showcase/loading-ja.png)
 ![Timezone: Day](./public/images/demo-showcase/day-time-ja.png)
