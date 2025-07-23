@@ -8,6 +8,8 @@ A fully responsive weather application that visualizes real-time weather through
 
 [Live Demo](https://rue-eru.github.io/weather-app)
 
+| State | Interface |
+|------|--------|
 | Starting Screen | ![Starting Screen](./public/images/demo-showcase/starting-screen-en.png) |
 | Loading Screen | ![Loading Screen](./public/images/demo-showcase/loading-ja.png) |
 | Timezone: Day | ![Timezone: Day](./public/images/demo-showcase/day-en.png) |
