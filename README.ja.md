@@ -1,5 +1,9 @@
 # 天気予報アプリ (動的アニメーション付き)
 
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
+![TailwindCSS](https://img.shields.io/badge/TailwindCSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)
+
 React 19 + TypeScriptで開発された多言語対応の天気アプリ。Tailwind CSSでスタイリングされ、時間帯や場所に応じてUIが変化します。
 
 [デモはこちら](https://rue-eru.github.io/weather-app)

@@ -1,5 +1,9 @@
 # Weather App with Dynamic Animations
 
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
+![TailwindCSS](https://img.shields.io/badge/TailwindCSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)
+
 A fully responsive weather application that visualizes real-time weather through dynamic, animated scenes and supports several languages. Build with React 19 + TypeScript and styled via Tailwind CSS, the app adjusts visuals by location, and time of day.
 
 > **Note for Japanese Recruiters**:  
