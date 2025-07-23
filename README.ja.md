@@ -4,13 +4,15 @@ React 19 + TypeScriptで開発された多言語対応の天気アプリ。Tailw
 
 [デモはこちら](https://rue-eru.github.io/weather-app)
 
-![Starting Screen](./public/images/demo-showcase/starting-screen-en.png)
-![Loading Screem](./public/images/demo-showcase/loading-ja.png)
-![Timezone: Day](./public/images/demo-showcase/day-time-ja.png)
-![Timezone: Evening](./public/images/demo-showcase/evening-ru.png)
-![Timezone: Night](./public/images/demo-showcase/night-time-ru.png)
-![Timezone: Morning](./public/images/demo-showcase/morning-en.png)
-![Mobile](./public/images/demo-showcase/sm-viewport-ja.png)
+| 状態 | 表示例 |
+|------|--------|
+| 起動画面 | ![起動画面](./public/images/demo-showcase/starting-screen-en.png) |
+| データ取得中 | ![読み込み中](./public/images/demo-showcase/loading-ja.png) |
+| 昼間表示 | ![昼間表示](./public/images/demo-showcase/day-en.png) |
+| 夕方表示 | ![夕方表示](./public/images/demo-showcase/evening-ru.png) | 
+| 夜間表示 | ![夜間表示](./public/images/demo-showcase/night-ja.png) |
+| 早朝表示 | ![早朝表示](./public/images/demo-showcase/morning-ja.png) |
+| スマートフォン表示 | ![スマートフォン表示](./public/images/demo-showcase/sm-morning-en.png) |
 
 ## ✨ 主な特徴
 - **3ヶ国語対応** (英語/日本語/ロシア語)
