@@ -11,6 +11,8 @@ interface HumidityDisplayProps {
 const HumidityDisplay = ({data}: HumidityDisplayProps) => {
     const { humidity } = getHumidityData(data);
     const { t } = useTranslation();
+    const humidityIconUrl = "public/images/component-window-icons/humidity.png?as=webp&width=10"
+
 
     if (humidity === undefined) {
         console.debug(t('Humidity-unavailable'), {
@@ -35,10 +37,12 @@ const HumidityDisplay = ({data}: HumidityDisplayProps) => {
             >
                 
                 <img
-                    src={`./images/component window icons/humidity.png`}
-                    alt='humidity'
+                    src={humidityIconUrl}
+                    alt={t("Humidity")}
                     className='window-icon'
                     draggable="false"
+                    loading="lazy"
+                    sizes="10px"
                 />
                 <span className="font-bold">{Math.round((humidity))}%</span>
             </HoverCloud>

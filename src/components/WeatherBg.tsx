@@ -264,6 +264,8 @@ const WeatherBg = ({ data, className = "" }: WeatherBgProps) => {
                                 [bird.direction === 'right' ? 'left' : 'right']: bird.direction === 'right' ? '-10%' : '-60%'
                             }}
                             alt={`bird flying ${bird.direction}`}
+                            loading="lazy"
+                            sizes="20px"
                         />
                     ))}
                 </div>
@@ -283,6 +285,8 @@ const WeatherBg = ({ data, className = "" }: WeatherBgProps) => {
                                 transform: `scale(${0.8 + Math.random() * 0.4})`,
                                 left: cloud.left
                             }}
+                            loading="lazy"
+                            sizes="20px"
                         />
                     ))}
                 </div>

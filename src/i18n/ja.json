@@ -1,4 +1,8 @@
 {
+  "app" : {
+    "title": "天気予報アプリ",
+    "description": "動的なアニメーションと複数のAPIを備えた多言語リアルタイム天気アプリ"
+  },
   "loading": "読み込み中...",
   "loading-wait": "少々お待ちください...",
   "City not found": "都市が見つかりません",
@@ -62,8 +66,10 @@
     "99": "雷とあられ",
     "unknown": "不明な天気"
   },
+  "start-bg-alt": "アニメーションしているバックグラウンドの天気アイコン",
   "unknown": "不明",
   "Project by": "によるプロジェクト",
-  "profile":"GitHubの\nプロフィールを\nご覧ください"
+  "profile":"GitHubの\nプロフィールを\nご覧ください",
+  "github-alt": "お問い合わせの画像「@」"
 
 }

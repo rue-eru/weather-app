@@ -37,16 +37,16 @@ export const WeatherIcon = ({code, size = 'md', className = '', data, timezone, 
         return `${basePath}${iconType}.png`
     }
 
-
-    
     return (
         <img
         src={getIconPath()}
             alt={getWeatherDescription(code)}
             className={`${styles.WeatherIcon} ${styles[size]} ${className}}`}
             draggable="false"
+            loading="lazy"
+            sizes="10px"
             onError={(e) => {
-                (e.target as HTMLImageElement).src = `./images/weather-variable/unknown.png`
+                (e.target as HTMLImageElement).src = `./images/weather-variable/unknown.png?as=webp&width=10`
             }}
         />
     )

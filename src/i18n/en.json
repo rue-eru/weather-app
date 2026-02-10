@@ -1,4 +1,8 @@
 {
+  "app" : {
+    "title": "Weather App",
+    "description": "Real-time multilingual weather app with dynamic animations and multiple APIs"
+  },
   "loading": "Loading...",
   "loading-wait": "Please wait...",
   "City not found": "City not found",
@@ -62,7 +66,9 @@
   "99": "Thunderstorm with heavy hail",
   "unknown": "Unknown weather"
 },
+"start-bg-alt": "animated weather icon background",
 "unknown": "Unknown",
 "Project by": "Project by",
-"profile": "Visit my GitHub profile"
+"profile": "Visit my GitHub profile",
+"github-alt": "Contact '@' image"
 }

@@ -23,6 +23,10 @@ const CreditToggle = ({data}: CreditToggleProps) => {
     const textClass = getTextStyles(date, data);
     const isBlack = textClass.includes("text-black");
     const lClass = "font-bold cursor-pointer inline-block";
+    const toggleIcon = `${isBlack 
+            ? `./images/others/@-black.png`
+            : `./images/others/@-white.png`
+        }?as=webp&width=10`
 
     return (
         <div
@@ -32,11 +36,10 @@ const CreditToggle = ({data}: CreditToggleProps) => {
         >
             {/*closed state*/}
             <img
-                src={isBlack 
-                        ? `./images/others/@-black.png`
-                        : `./images/others/@-white.png`
-                }
-                alt="Contact me on Github"
+                src={toggleIcon}
+                alt={t('github-alt')}
+                loading="lazy"
+                sizes="5px"
                 className={`w-8 h-8
                     ${isOpen ? "transition-transform duration-700 ease-in-out rotate-360" : " "} 
                     `}

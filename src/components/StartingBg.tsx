@@ -1,4 +1,5 @@
 import { ReactNode, useEffect, useState } from "react"
+import { useTranslation } from "react-i18next";
 
 interface StartingBgProps {
 
@@ -7,6 +8,7 @@ interface StartingBgProps {
 
 const StartingBg = ({ children }: StartingBgProps) => {
     const [icons, setIcons] = useState<{ src: string; id: string}[]>([]);
+    const t = useTranslation("start-bg-alt")
 
     useEffect(() => {
         const folder = './images/weather-variable/';
@@ -36,8 +38,10 @@ const StartingBg = ({ children }: StartingBgProps) => {
                     <img
                         key={icon.id}
                         src={icon.src}
-                        alt=""
-                        className="opacity-90 w-16 h-16 "
+                        alt={`${t}`}
+                        fetchPriority="high"
+                        className="opacity-90 w-16 h-16 object-contain"
+                        sizes="15px"
                         style={{
                             /*top: `${(Math.random() * 20) + 20}%`,
                             left: `${(Math.random() * 40) + 20}%`,*/

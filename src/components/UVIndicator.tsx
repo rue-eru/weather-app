@@ -16,6 +16,7 @@ const UVIndicator = ({ uvData, data, latitude, longitude }: UVIndicatorProps) =>
     const { t } = useTranslation();
     const [uvValue, setUvValue] = useState<number>(0);
     const [isLoading, setIsLoading] = useState(false);
+    const uvIconUrl = "public/images/component-window-icons/ultraviolet.png?as=webp&width=10"
 
     useEffect(() => {        
         if (uvData) {
@@ -69,10 +70,12 @@ const UVIndicator = ({ uvData, data, latitude, longitude }: UVIndicatorProps) =>
             >
                 <div>
                     <img
-                        src={`./images/component window icons/ultraviolet.png`}
-                        alt='ultraviolet'
+                        src={uvIconUrl}
+                        alt={t("Ultraviolet radiation")}
                         className='window-icon'
                         draggable="false"
+                        loading="lazy"
+                        sizes="10px"
                     />
                     <div className={`w-10 h-10 rounded-full flex items-center justify-center mt-2 ${
                         !uvValue ? 'bg-gray-400' :

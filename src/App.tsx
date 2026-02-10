@@ -1,6 +1,6 @@
 import './index.css'
 import WeatherCard from './components/WeatherCard'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { WeatherResponse } from './types/weather'
 import { fetchCityCoordinates, fetchWeather } from './utils/fetchWeather';
 import CitySearch from './utils/CitySearch';
@@ -24,7 +24,13 @@ function App() {
   const [isLoading, setIsLoading] = useState(false);
   const [uvData, setUvData] = useState<UVData | null>(null);
   const { t } = useTranslation();
-  const fontClass = getFontClass(i18next.language)
+  const fontClass = getFontClass(i18next.language);
+
+  useEffect(() => {
+    document.title = t('app.title');
+    document.querySelector('meta[name="description"]')?.setAttribute("content", t("app.description"));
+    document.documentElement.lang = i18next.language;
+  }, [t, i18next.language])
 
   const handleSearch = async (city: string) => {
     try {
@@ -67,7 +73,7 @@ function App() {
   };
 
   return (
-    <>
+    <div className='mx-auto lg:w-[50%]'>
       {!weather 
       ? (
         <StartingBg />
@@ -84,7 +90,7 @@ function App() {
         <LanguageSelector/>
       </div>
 
-        <div className={`${fontClass} relative z-10 min-w-[320] w-full mx-auto px-4`}>
+        <div className={`${fontClass} relative z-10 min-w-[320] w-full mx-auto sm:p-4 p-2`}>
           <CitySearch 
             onSearch={handleSearch}
             data={weather || null} 
@@ -119,7 +125,7 @@ function App() {
           )}
         </div>
 
-    </>
+    </div>
   )
 }
 
