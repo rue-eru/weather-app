@@ -56,9 +56,9 @@ const WeatherBg = ({ data, className = "" }: WeatherBgProps) => {
     const morningBirdsRef = useRef<MorningBird[]>([]);
     const cloudsRef = useRef<Cloud[]>([]);
     const animationRefs = useRef<{
-        shootingStar?: NodeJS.Timeout;
-        clouds?: NodeJS.Timeout;
-        birds?: NodeJS.Timeout;
+        shootingStar?: ReturnType<typeof setTimeout>;
+        clouds?: ReturnType<typeof setTimeout>;
+        birds?: ReturnType<typeof setTimeout>;
     }>({});
 
     useEffect(() => {

@@ -2,9 +2,9 @@ import i18next from "i18next";
 import { useState } from "react";
 import { useTranslation} from "react-i18next";
 import HoverCloudInline from "./HoverCloudInline";
-import { getWindowStyles } from "@/utils/weatherUtils";
-import { WeatherResponse } from "@/types/weather";
-import { getTextStyles } from "@/utils/weatherUtils";
+import { getWindowStyles } from "../utils/weatherUtils";
+import { WeatherResponse } from "../types/weather";
+import { getTextStyles } from "../utils/weatherUtils";
 
 interface CreditToggleProps {
     data: WeatherResponse | null;

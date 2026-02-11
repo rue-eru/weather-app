@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { useTranslation} from "react-i18next";
-import { languages } from "@/utils/weatherUtils";
+import { languages } from "../utils/weatherUtils";
 
 const LanguageSelector = () => {
     const { i18n } = useTranslation();
