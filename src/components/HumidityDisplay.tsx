@@ -11,8 +11,6 @@ interface HumidityDisplayProps {
 const HumidityDisplay = ({data}: HumidityDisplayProps) => {
     const { humidity } = getHumidityData(data);
     const { t } = useTranslation();
-    const humidityIconUrl = "public/images/component-window-icons/humidity.png?as=webp&width=10"
-
 
     if (humidity === undefined) {
         console.debug(t('Humidity-unavailable'), {
@@ -37,7 +35,7 @@ const HumidityDisplay = ({data}: HumidityDisplayProps) => {
             >
                 
                 <img
-                    src={humidityIconUrl}
+                    src={`./images/component-window-icons/humidity.png`}
                     alt={t("Humidity")}
                     className='window-icon'
                     draggable="false"

@@ -11,8 +11,7 @@ interface WindDisplayProps {
 
 const WindDisplay = ({ data, unit = 'km/h' }: WindDisplayProps) => {
     const { t } = useTranslation();
-    const windIconUrl = "public/images/component-window-icons/wind-rose.png?as=webp&width=10"
-
+    
     const DIRECTIONS = [
         t('direction.north'),
         t('direction.northeast'),
@@ -51,7 +50,7 @@ const WindDisplay = ({ data, unit = 'km/h' }: WindDisplayProps) => {
                 >
       
                     <img
-                        src={windIconUrl}
+                        src={`./images/component-window-icons/wind-rose.png`}
                         alt={t("wind-title")}
                         className='window-icon'
                         draggable="false"

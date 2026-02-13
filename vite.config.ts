@@ -10,12 +10,7 @@ export default defineConfig({
     react(),
     tailwindcss(),
     imagetools({
-      defaultDirectives: (url) => {
-        if (url.pathname.endsWith('.png') || url.pathname.endsWith('.jpg')) {
-          return new URLSearchParams('format=webp&quality=85');
-        }
-        return new URLSearchParams();
-      }  
+  
     })
   ],
   resolve: {

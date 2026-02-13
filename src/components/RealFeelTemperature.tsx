@@ -12,7 +12,6 @@ interface RealFeelTemperatureProps {
 
 const RealFeelTemperature = ({ data, unit = 'celsius', rounded = true }: RealFeelTemperatureProps) => {
     const { t } = useTranslation();
-    const realTempIconUrl = "public/images/component-window-icons/temperature.png?as=webp&width=10"
 
     if (!data.current_weather) return null;
 
@@ -43,7 +42,7 @@ const RealFeelTemperature = ({ data, unit = 'celsius', rounded = true }: RealFee
                     className={`${windowClass}`}
                 >
                         <img
-                            src={realTempIconUrl}
+                            src={`./images/component-window-icons/temperature.png`}
                             alt={t("Feels like temperature")}
                             className='window-icon'
                             draggable="false"
