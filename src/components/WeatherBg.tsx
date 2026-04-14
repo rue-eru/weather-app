@@ -1,6 +1,8 @@
 import { useEffect, useRef, useState } from "react";
 import { WeatherResponse } from "../types/weather"
 import { getTimeOfDayClass } from "../utils/weatherUtils"
+import ShootingStar from "./timeElements/ShootingStar";
+import Stars from "./Stars";
 
 declare const crypto: Crypto;
 
@@ -44,11 +46,6 @@ const WeatherBg = ({ data, className = "" }: WeatherBgProps) => {
     const isDay = timeOfDayClass === "bg-day";
     const isEvening = timeOfDayClass === "bg-evening";
 
-    const [shootingStarPosition, setShootingStarPosition] = useState<{
-        left: string,
-        delay: string
-    } | null>(null);
-
     const [clouds, setClouds] = useState<Cloud[]>([]);
     const [flickerDots, setFlickerDots] = useState<FlickerDot[]>([]);
     const [morningBirds, setMorningBirds] = useState<MorningBird[]>([]);
@@ -61,36 +58,9 @@ const WeatherBg = ({ data, className = "" }: WeatherBgProps) => {
         birds?: ReturnType<typeof setTimeout>;
     }>({});
 
-    useEffect(() => {
-        if(!isNight) return;
 
-        let timeoutId: ReturnType<typeof setTimeout>;
 
-        const shoot = () => {
-            setShootingStarPosition(null);
 
-            timeoutId = setTimeout(() => {
-                const leftStar = `${Math.random() * 60}%`;
-                
-                setShootingStarPosition({
-                    left: leftStar,
-                    delay: "0s",
-                });
-
-                timeoutId = setTimeout(shoot, 10000) //10s
-                animationRefs.current.shootingStar = timeoutId;
-            }, 100); //animation can reset due to short timeout
-        };
-
-        timeoutId = setTimeout(shoot, 2000);
-        animationRefs.current.shootingStar = timeoutId;
-        const currentShootingStar = animationRefs.current.shootingStar;
-        return () => {
-            if (currentShootingStar) {
-                clearTimeout(currentShootingStar)
-            }
-        };
-    }, [isNight]);
 
     useEffect(() => {
         if(!isDay) return;
@@ -220,31 +190,13 @@ const WeatherBg = ({ data, className = "" }: WeatherBgProps) => {
     if (!weatherTime) return null;
 
     return (
-        <div className={`transition-bg ${timeOfDayClass} ${className}`}>
+        <div className={`transition-bg h-dvh ${timeOfDayClass} ${className}`}>
             {isNight && (
                 <div className="absolute inset-0 overflow-hidden z-0">
-                    {[...Array(30)].map((_, i) => (
-                        <span 
-                            key={`star-${i}-${crypto.randomUUID()}`}
-                            className="star"
-                            style={{
-                                top: `${Math.random() * 100}%`,
-                                left: `${Math.random() * 100}%`,
-                                animationDelay: `${Math.random() * 5}s`,
-                                zIndex: Math.random() < 0.5 ? 0 : 1
-                            }}
-                        />
-                    ))}
-                    {shootingStarPosition && (
-                        <span
-                            className="shooting-star"
-                            style={{
-                               top: 0,
-                               left: shootingStarPosition.left,
-                               animationDelay: shootingStarPosition.delay,
-                            }}
-                        />
-                    )}
+                    <Stars />
+                    <ShootingStar 
+                        isNight={isNight}
+                    />
                 </div>
             )}
 

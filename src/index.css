@@ -160,7 +160,7 @@ dark blue bg with twinkling and shooting star animations
 
   100% {
     transform: translate(100vh, 100vh) rotate(45deg);
-    opacity: 0.5;
+    opacity: 0;
   }
 }
 
