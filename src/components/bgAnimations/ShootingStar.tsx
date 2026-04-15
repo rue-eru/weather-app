@@ -1,10 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 
-interface ShootingStarProps {
-    isNight: boolean
-}
-
-export default function ShootingStar ({isNight}: ShootingStarProps) {
+export default function ShootingStar () {
 
     const [shootingStarPosition, setShootingStarPosition] = useState<{
         left: string,
@@ -16,7 +12,6 @@ export default function ShootingStar ({isNight}: ShootingStarProps) {
     }>({});
 
     useEffect(() => {
-        if(!isNight) return;
 
         let timeoutId: ReturnType<typeof setTimeout>;
 
@@ -31,12 +26,12 @@ export default function ShootingStar ({isNight}: ShootingStarProps) {
                     delay: "0s",
                 });
 
-                timeoutId = setTimeout(shoot, 15000) //10s
+                timeoutId = setTimeout(shoot, 15000) //15s
                 animationRefs.current.shootingStar = timeoutId;
-            }, 100); //animation can reset due to short timeout
+            }, 500); //animation can reset due to short timeout
         };
 
-        timeoutId = setTimeout(shoot, 2000);
+        timeoutId = setTimeout(shoot, 3000);
         animationRefs.current.shootingStar = timeoutId;
         const currentShootingStar = animationRefs.current.shootingStar;
         return () => {
@@ -44,7 +39,7 @@ export default function ShootingStar ({isNight}: ShootingStarProps) {
                 clearTimeout(currentShootingStar)
             }
         };
-    }, [isNight]);
+    }, []);
 
     return(
         <>
@@ -52,7 +47,7 @@ export default function ShootingStar ({isNight}: ShootingStarProps) {
                 <div
                     className="shooting-star"
                     style={{
-                       top: "-10%",
+                       top: "-30%",
                        left: shootingStarPosition.left,
                        animationDelay: shootingStarPosition.delay,
                     }}

@@ -203,21 +203,21 @@ DAY 11AM - 5PM
 .cloud {
   position: absolute;
   width: 200px;
-  animation: floatCloud 60s linear infinite;
+  animation: floatCloud linear forwards;
   pointer-events: none;
   opacity: 0.6;
 }
 
 @keyframes floatCloud {
   0% {
-    transform: translateX(-150px);
+    transform: translateX(0);
     opacity: 0.6;
   }
   20% {
     opacity: 0.7;
   }
   100% {
-    transform: translateX(100vw);
+    transform: translateX(140vw);
     opacity: 0.2;
   }
 }
