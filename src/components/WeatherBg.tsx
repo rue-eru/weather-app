@@ -25,7 +25,7 @@ const WeatherBg = ({ data, className = "" }: WeatherBgProps) => {
     if (!weatherTime) return null;
 
     return (
-        <div className={`transition-bg h-dvh ${timeOfDayClass} ${className}`}>
+        <div className={`transition-bg ${timeOfDayClass} ${className}`}>
 
             {isNight && (
                 <div className="absolute inset-0 overflow-hidden z-0">

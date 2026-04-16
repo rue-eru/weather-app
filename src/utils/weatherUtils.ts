@@ -124,15 +124,15 @@ export const getBtnStyle = (date: Date | null, data: WeatherResponse | null) => 
 
     switch (timeClass) {
         case "bg-day":
-            return 'hover:bg-blue-100 bg-white text-cyan-600 border border-blue-300 shadow hover:shadow-xl transition duration-300 hover:scale-90 hover:ring-1/2 hover:ring-offset-2';
+            return 'hover:bg-blue-100 bg-white hover:font-bold text-cyan-600 border border-blue-300 shadow hover:shadow-xl transition duration-300 hover:scale-90 hover:ring-1/2 hover:ring-offset-2 hover:ring-offset-cyan-600';
         case "bg-evening":
-            return 'hover:bg-pink-100 bg-pink-50 text-rose-600 border border-rose-300 shadow hover-shadow-md transition duration-300 hover:scale-90 hover:ring-1/2 hover:ring-offset-2';
+            return 'hover:bg-pink-100 bg-pink-50 hover:font-bold text-rose-600 border border-rose-300 shadow hover-shadow-md transition duration-300 hover:scale-90 hover:ring-1/2 hover:ring-offset-2 hover:ring-offset-red-600';
         case "bg-morning":
-            return 'hover:bg-orange-100 bg-orange-50 text-orange-900 border border-orange-300 shadow-lg hover:shadow-lg hover:shadow-amber-900 transition duration-300 hover:scale-90 hover:ring-1/2 hover:ring-offset-2';
+            return 'hover:bg-orange-100 bg-orange-50 hover:font-bold text-orange-900 border border-orange-300 shadow-lg hover:shadow-lg hover:shadow-amber-900 transition duration-300 hover:scale-90 hover:ring-1/2 hover:ring-offset-2 hover:ring-offset-pink-900';
         case "bg-night":
-            return 'hover:bg-cyan-500 bg-cyan-700 text-sky-50 border border-cyan-500 shadow-xl hover:shadow-sky-950 transition duration-300 hover:scale-90 hover:ring-1/2 hover:ring-offset-2';
+            return 'hover:bg-cyan-500 bg-cyan-700 text-sky-50 hover:font-bold border border-cyan-500 shadow-xl hover:shadow-sky-950 transition duration-300 hover:scale-90 hover:ring-1/2 hover:ring-offset-2 hover:ring-offset-blue-300';
         case 'starting-screen':
-            default: return "hover:bg-c-900 bg-pink-600 text-white border border-pink-800 shadow-lg hover:shadow-pink-900 transition duration-300 hover:scale-90 hover:ring-1/2 hover:ring-offset-2"
+            default: return "hover:bg-pink-700 bg-pink-600 text-white hover:font-bold border border-pink-800 shadow-lg hover:shadow-pink-900 transition duration-300 hover:scale-90 hover:ring-1/2 hover:ring-offset-2 hover:ring-offset-pink-900"
 
     }
 }    
@@ -144,11 +144,11 @@ export const getInputStyle = (date: Date | null, data: WeatherResponse | null) =
         case "bg-day":
             return 'hover:bg-blue-100 bg-white text-cyan-600 border border-blue-300 shadow hover:shadow-xl transition duration-300 focus:outline-solid placeholder-cyan-600';
         case "bg-evening":
-            return 'hover:bg-pink-100 bg-pink-50 text-rose-600 border border-rose-300 shadow hover-shadow-md transition duration-300 focus:outline-solid placeholder-rose-600';
+            return 'hover:bg-pink-100 bg-pink-50 text-rose-600 border border-rose-300 shadow hover-shadow-md transition duration-300 focus:outline-solid  placeholder-rose-600';
         case "bg-morning":
-            return 'hover:bg-orange-100 active:bg-orange-100 bg-orange-50 text-orange-900 border border-orange-300 shadow-md hover:shadow-lg transition duration-300 focus:outline-solid placeholder-orange-900';
+            return 'hover:bg-orange-100 bg-orange-50 text-orange-900 border border-orange-300 shadow-md hover:shadow-lg transition duration-300 focus:outline-solid focus:outline-red-200 placeholder-orange-900';
         case "bg-night":
-            return 'hover:bg-indigo-950 bg-indigo-950 text-cyan-50 border border-slate-800 shadow-lg hover:shadow-sky-950 transition duration-300 placeholder-cyan-50 focus:outline-solid';
+            return 'hover:bg-indigo-950 bg-indigo-950 text-cyan-50 border border-slate-800 shadow-lg hover:shadow-sky-950 transition duration-300 placeholder-cyan-50 focus:outline-solid focus:outline-cyan-600';
         case 'starting-screen':
             default: return "hover:bg-blue-100 bg-white text-pink-900 border border-blue-300 shadow hover:shadow-xl transition duration-300 focus:outline-solid placeholder-pink-900"
     }

@@ -40,7 +40,7 @@ const CreditToggle = ({data}: CreditToggleProps) => {
                 alt={t('github-alt')}
                 loading="lazy"
                 sizes="5px"
-                className={`w-8 h-8
+                className={`w-8 h-8 -mt-1
                     ${isOpen ? "transition-transform duration-700 ease-in-out rotate-360" : " "} 
                     `}
             />

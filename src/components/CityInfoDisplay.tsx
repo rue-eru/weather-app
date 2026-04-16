@@ -103,19 +103,19 @@ const CityInfoDisplay = ({ unit, onUnitToggle, resetUnitToCelsius, cityName, dat
 
 
     return (
-        <div className="p-4 -mb-3">
-            <div className={`flex items-center justify-between p-5 gap-2 window-style ${windowClass}`}>
-                <div className="inline-flex items-center gap-4">
+        <div className="sm:p-4 p-1">
+            <div className={`flex items-center justify-between sm:p-5 p-2 gap-2 window-style ${windowClass}`}>
+                <div className="inline-flex items-center gap-4 sm:text-xl text-sm">
                     {cityName && 
-                        <h2 className="text-xl font-bold">
+                        <h2 className="font-bold">
                             {capitalize(cityName)}
                         </h2>
                     }
                     {isLoading ? (
-                        <p className="text-xl">
+                        <p>
                             {t('timezone-detection')}
                         </p>) : (
-                         <p className="text-xl">
+                         <p>
                             {localTime || '--:--'}
                         </p>                       
                         )

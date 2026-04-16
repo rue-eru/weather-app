@@ -35,7 +35,7 @@ const CitySearch = ({ onSearch, data }: CitySearchProps ) => {
     return (
         <form 
             onSubmit={handleSubmit} 
-            className="flex gap-2 -mb-2 p-4">
+            className="flex gap-2 -mb-2 px-0.5 sm:p-5 py-4 w-full">
                 <input
                     id="search-input"
                     type="text"
@@ -43,13 +43,13 @@ const CitySearch = ({ onSearch, data }: CitySearchProps ) => {
                     onChange={(e) => setCity(e.target.value)}
                     onKeyDown={handleKeyDown}
                     placeholder={t("City Name (min 3 letters)")}
-                    className={`flex-1 p-2 rounded ${inputClass}`}
+                    className={`flex-1 min-w-40 pl-2 rounded ${inputClass}`}
                 />
                 <button
                     id="search-btn"
                     type="submit"
                     onClick={() => onSearch(city)}
-                    className={`px-4 py-2 rounded transition-colors ${btnClass}`}
+                    className={`h-10 min-w-20 rounded transition-colors ${btnClass}`}
                 >{t('Search')}
                 </button>
         </form>

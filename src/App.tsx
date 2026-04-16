@@ -90,7 +90,7 @@ function App() {
         <LanguageSelector/>
       </div>
 
-        <div className={`${fontClass} relative z-10 min-w-[320] w-full mx-auto sm:p-4 p-2`}>
+        <div className={`${fontClass} relative z-10 w-full mx-auto sm:p-4 p-2`}>
           <CitySearch 
             onSearch={handleSearch}
             data={weather || null} 

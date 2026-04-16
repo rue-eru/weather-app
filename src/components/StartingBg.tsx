@@ -33,14 +33,14 @@ const StartingBg = ({ children }: StartingBgProps) => {
 
     return (
         <div className="starting-screen fixed inset-0 -z-10 ">
-            <div className="flex flex-nowrap justify-center gap-10 pt-50 pb-8 px-4">
+            <div className="flex sm:flex-nowrap justify-center sm:gap-10 gap-5 pt-50 pb-8 sm:px-4 px-0.5">
                 {icons.map((icon) => (
                     <img
                         key={icon.id}
                         src={icon.src}
                         alt={`${t}`}
                         fetchPriority="high"
-                        className="opacity-90 w-16 h-16 object-contain"
+                        className="opacity-90 min-w-10 min-h-10 w-16 h-16 object-contain"
                         sizes="15px"
                         style={{
                             /*top: `${(Math.random() * 20) + 20}%`,

@@ -22,7 +22,7 @@ const WeatherCard = ({ data, unit, UVdata}: WeatherCardProps) => {
     }
 
     return (
-        <div className="bg-transparent p-4 rounded-xl  text-black ">
+        <div className="bg-transparent p-1 sm:p-4 rounded-xl mt-3  text-black ">
             
             <TodayWeatherInfoDisplay
                 data={data}
@@ -34,7 +34,7 @@ const WeatherCard = ({ data, unit, UVdata}: WeatherCardProps) => {
                 unit={unit}
             />
 
-            <div className="grid grid-cols-2 h-80 sm:grid-cols-4 gap-3 sm:w-full sm:h-30 mt-5">
+            <div className="grid grid-cols-2 h-60 sm:grid-cols-4 gap-3 sm:w-full sm:h-30 mt-5">
 
                 <UVIndicator 
                      uvData={UVdata}

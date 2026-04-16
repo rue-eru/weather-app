@@ -23,7 +23,7 @@ const TodayWeatherInfoDisplay = ({ data, unit, timezone }: TodayWeatherInfoProps
     const windowClass = getWindowStyles(date, data);
 
     return (
-        <div className={`window-style p-5 flex w-full ${windowClass}`}>
+        <div className={`window-style sm:p-5 p-1 pl-5 flex w-full ${windowClass}`}>
                 <WeatherIcon
                     code={weatherCode}
                     size="lg"

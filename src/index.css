@@ -20,8 +20,7 @@ body {
   margin: 0 auto;
   margin-top: 2rem;
   overflow-x: hidden;
-  min-width: 500px;
-
+  min-width: 320px;
 }
 
 @font-face {

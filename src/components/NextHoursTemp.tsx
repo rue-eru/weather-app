@@ -46,7 +46,7 @@ const NextHoursTemp = ({ data, unit, rounded = true, timezone }: NextHoursTempPr
     const windowClass = getWindowStyles(date, data);
 
     return (
-        <div className={`window-style mt-5 w-full p-5 ${windowClass}`}>
+        <div className={`window-style mt-5 w-full sm:p-5 p-1 ${windowClass}`}>
             <ul 
                 ref={scrollRef}
                 className="inline-flex space-x-4 md:space-x-6 space-y-1 overflow-x-auto w-full scrollbar-style"
@@ -55,12 +55,12 @@ const NextHoursTemp = ({ data, unit, rounded = true, timezone }: NextHoursTempPr
                 {hourlyData.map((hour) => (
                     <li 
                         key={hour.time} 
-                        className="flex flex-col items-center min-w-[50px]"
+                        className="flex flex-col items-center min-w-12.5 sm:text-base text-xs"
                     >
                         <span>
                             {new Date(hour.time).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit'})}
                         </span>
-                        <span className="font-medium">
+                        <span>
                             {formatTemperature(hour.temp, 'celsius', unit, rounded)}{getTempUnitSymbol(unit)}
                         </span>
                         <WeatherIcon
