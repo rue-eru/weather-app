@@ -6,7 +6,6 @@ interface Cloud {
     delay: string;
     src: string;
     left: string;
-    duration: string;
     scale: number;
 }
 
@@ -22,8 +21,6 @@ export default function Clouds () {
         setClouds([]);
         cloudsRef.current = []; 
 
-        const speed = 1.6 + Math.random() * 10; //vw per sec
-        const durationSec = 160 / speed;
         
         const initialClouds = Array.from({ length: 3}).map((_, i) => ({
                 id: `cloud-${crypto.randomUUID()}`,
@@ -31,7 +28,6 @@ export default function Clouds () {
                 delay: `${i * 0.5}s`,
                 src: `./images/bg-assets/cloud-${Math.floor(Math.random() * 3) + 1}.png`,
                 left: `${Math.random() * 100}%`,
-                duration: `${durationSec}s`,
                 scale: 0.8 + Math.random() * 0.4
         }))
 
@@ -45,7 +41,6 @@ export default function Clouds () {
                 delay: "0s",
                 src: `./images/bg-assets/cloud-${Math.floor(Math.random() * 3) + 1}.png`,
                 left: "-20vw",
-                duration: `${durationSec}s`,
                 scale: 0.8 + Math.random() * 0.4            };
 
             setClouds(prev => [...prev, newCloud]);
@@ -80,7 +75,6 @@ export default function Clouds () {
                         style={{
                             top:cloud.top,
                             animationDelay: cloud.delay,
-                            animationDuration: cloud.duration,
                             transform: `scale(${cloud.scale})`,
                             left: cloud.left
                         }}

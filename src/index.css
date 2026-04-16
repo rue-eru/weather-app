@@ -202,7 +202,7 @@ DAY 11AM - 5PM
 .cloud {
   position: absolute;
   width: 200px;
-  animation: floatCloud linear forwards;
+  animation: floatCloud linear forwards 60s;
   pointer-events: none;
   opacity: 0.6;
 }
