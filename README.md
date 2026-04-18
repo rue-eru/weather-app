@@ -14,13 +14,14 @@ A fully responsive weather application that visualizes real-time weather through
 
 | State | Interface |
 |------|--------|
+| App Gif | ![App gif](./public/images/demo-showcase/appanime.gif) |
 | Starting Screen | ![Starting Screen](./public/images/demo-showcase/starting-screen-en.png) |
 | Loading Screen | ![Loading Screen](./public/images/demo-showcase/loading-ja.png) |
 | Timezone: Day | ![Timezone: Day](./public/images/demo-showcase/day-en.png) |
 | Timezone: Evening | ![Timezone: Evening](./public/images/demo-showcase/evening-ru.png) | 
 | Timezone: Night | ![Timezone: Night](./public/images/demo-showcase/night-ja.png) |
 | Timezone: Morning | ![Timezone: Morning](./public/images/demo-showcase/morning-ja.png) |
-| Mobile | ![Mobile](./public/images/demo-showcase/sm-morning-en.png) |
+| Mobile | ![Mobile](./public/images/demo-showcase/sm-morning-ru.png) |
 
 ---
 

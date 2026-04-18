@@ -10,13 +10,14 @@ React 19 + TypeScriptで開発された多言語対応の天気アプリ。Tailw
 
 | 状態 | 表示例 |
 |------|--------|
+| アプリアニメーション | ![アプリアニメーション](./public/images/demo-showcase/appanime.gif) |
 | 起動画面 | ![起動画面](./public/images/demo-showcase/starting-screen-en.png) |
 | データ取得中 | ![読み込み中](./public/images/demo-showcase/loading-ja.png) |
 | 昼間表示 | ![昼間表示](./public/images/demo-showcase/day-en.png) |
 | 夕方表示 | ![夕方表示](./public/images/demo-showcase/evening-ru.png) | 
 | 夜間表示 | ![夜間表示](./public/images/demo-showcase/night-ja.png) |
 | 早朝表示 | ![早朝表示](./public/images/demo-showcase/morning-ja.png) |
-| スマートフォン表示 | ![スマートフォン表示](./public/images/demo-showcase/sm-morning-en.png) |
+| スマートフォン表示 | ![スマートフォン表示](./public/images/demo-showcase/sm-morning-ru.png) |
 
 ## ✨ 主な特徴
 - **3ヶ国語対応** (英語/日本語/ロシア語)
